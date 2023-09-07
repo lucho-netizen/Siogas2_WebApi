@@ -32,7 +32,7 @@ namespace Siogas2_WebApi.Controllers
             return await _context.Gasoducto.ToListAsync();
         }
 
-        // GET: api/Gasoductos/5
+        // GET: api/Gasoductos/ 
         [HttpGet("{id}")]
         public async Task<ActionResult<Gasoducto>> GetGasoducto(int id)
         {
