@@ -3,7 +3,7 @@
 namespace Siogas2_webapi.Models
 {   
 
-    public class Gasoducto
+    public class Gasoducto  
     {
         [Key] public int Gasoducto_id { get; set; }
         
