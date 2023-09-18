@@ -1,6 +1,6 @@
 ﻿using Siogas2_webapi.Models;
 
-namespace Siogas2_WebApi.Controllers
+namespace Siogas2.Controllers
 {
     internal class Traer_Gasoductos
     {

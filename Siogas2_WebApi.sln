@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siogas2_WebApi", "Siogas2_WebApi\Siogas2_WebApi.csproj", "{531CA4E4-E3DF-4A27-A5CA-67ECF6EA808A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2_WebApi", "Siogas2_WebApi\Siogas2_WebApi.csproj", "{531CA4E4-E3DF-4A27-A5CA-67ECF6EA808A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.Data", "Siogas2.Data\Siogas2.Data.csproj", "{AF05D1EF-8D73-40D7-8038-845D77850679}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.DataInterfaces", "Siogas2.DataInterfaces\Siogas2.DataInterfaces.csproj", "{306B0CB6-A432-4A09-84A5-B369050A0645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicInterface", "LogicInterface\LogicInterface.csproj", "{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siogas2.Models", "Models\Siogas2.Models.csproj", "{840B7281-418A-4FEC-A2BA-A8A8417D7465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{531CA4E4-E3DF-4A27-A5CA-67ECF6EA808A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{531CA4E4-E3DF-4A27-A5CA-67ECF6EA808A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{531CA4E4-E3DF-4A27-A5CA-67ECF6EA808A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF05D1EF-8D73-40D7-8038-845D77850679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF05D1EF-8D73-40D7-8038-845D77850679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF05D1EF-8D73-40D7-8038-845D77850679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF05D1EF-8D73-40D7-8038-845D77850679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306B0CB6-A432-4A09-84A5-B369050A0645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306B0CB6-A432-4A09-84A5-B369050A0645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306B0CB6-A432-4A09-84A5-B369050A0645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306B0CB6-A432-4A09-84A5-B369050A0645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

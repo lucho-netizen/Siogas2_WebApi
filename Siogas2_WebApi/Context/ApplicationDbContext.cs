@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Siogas2_webapi.Models;
 
-namespace Siogas2_WebApi.Context
+namespace Siogas2.Context
 {
     public class ApplicationDbContext : DbContext
     {

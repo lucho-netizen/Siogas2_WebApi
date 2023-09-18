@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Siogas2_WebApi.Context;
+using Siogas2.Context;
 using Siogas2_webapi.Models;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace Siogas2_WebApi.Controllers
+
+namespace Siogas2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -58,7 +59,7 @@ namespace Siogas2_WebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutGasoducto(int id, Gasoducto gasoducto)
         {
-            if (id != gasoducto.Gasoducto_id)
+            if (id != gasoducto.gasoducto_id)
             {
                 return BadRequest();
             }
@@ -96,7 +97,7 @@ namespace Siogas2_WebApi.Controllers
             _context.Gasoducto.Add(gasoducto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGasoducto", new { id = gasoducto.Gasoducto_id }, gasoducto);
+            return CreatedAtAction("GetGasoducto", new { id = gasoducto.gasoducto_id }, gasoducto);
         }
 
 
@@ -122,70 +123,47 @@ namespace Siogas2_WebApi.Controllers
 
         private bool GasoductoExists(int id)
         {
-            return (_context.Gasoducto?.Any(e => e.Gasoducto_id == id)).GetValueOrDefault();
+            return (_context.Gasoducto?.Any(e => e.gasoducto_id == id)).GetValueOrDefault();
         }
 
 
         //Traer gasoducto por usuario
-        [HttpGet("TraerGasoductos")]
-        public IActionResult TraerGasoductos(string opcion, string user_name, Gasoducto gasoducto)
-        {
-            try
-            {
-                
+        //[ApiController]
+        //[Route("api/[controller]")]
+        //public class GasoductoController : ControllerBase
+        //{
+        //    private readonly GasoductoRepository gasoductoRepository;
 
-                string sql;
-                if (opcion == "MOVIL")
-                {
-                    sql = "select distinct u.gasoducto_id, g.nombre ";
-                    sql += "from usuario_gasoducto u inner join gasoducto g ";
-                    sql += "on u.gasoducto_id=g.gasoducto_id ";
-                    sql += "where usuario_username='" + user_name + "' ";
-                }
-                else
-                {
-                    sql = "select g.gasoducto_id, g.nombre ";
-                    sql += "from usuario_opcion_gasoductos u, gasoducto g ";
-                    sql += "where u.gasoducto_id = g.gasoducto_id ";
-                    sql += "and u.usuario = '" + user_name + "' ";
-                    sql += "and u.opcion = '" + opcion + "'";
-                }
+        //    public GasoductoController(GasoductoRepository gasoductoRepository)
+        //    {
+        //        this.gasoductoRepository = gasoductoRepository;
+        //    }
 
-                var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-                optionsBuilder.UseSqlServer(connectionString);
+        //    [HttpGet]
+        //    public IActionResult TraerGasoductos(string opcion, string user_name)
+        //    {
+        //        try
+        //        {
+        //            var gasoductos = gasoductoRepository.TraerGasoductos(opcion, user_name);
 
-                using (var dbContext = new ApplicationDbContext(optionsBuilder.Options))
-                {
-                    var consulta = dbContext.Gasoducto.FromSqlRaw(sql).ToList();
+        //            return Ok(new Traer_Gasoductos
+        //            {
+        //                message = "",
+        //                success = true,
+        //                datos = gasoductos.ToList()
+        //            });
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            return BadRequest(new Traer_Gasoductos
+        //            {
+        //                message = "Se ha producido un error, comuníquese con soporte informático",
+        //                success = false
+        //            });
+        //        }
+        //    }
+        //}
 
-                    List<Gasoducto> listado = new List<Gasoducto>();
-                    foreach (var registro in consulta)
-                    {
-                        Gasoducto elemento = new Gasoducto
-                        {
-                            Gasoducto_id = registro.Gasoducto_id,
-                            Nombre = registro.Nombre
-                        };
-                        listado.Add(elemento);
-                    }
-
-                    return Ok(new Traer_Gasoductos
-                    {
-                        message = "",
-                        success = true,
-                        datos = listado
-                    });
-                }
-            }
-            catch (Exception e)
-            {
-                return BadRequest(new Traer_Gasoductos
-                {
-                    message = "Se ha producido un error, comuníquese con soporte informático",
-                    success = false
-                });
-            }
-        }
     }
 }
 

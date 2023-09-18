@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Siogas2_WebApi
+namespace Siogas2
 {
     public class Program
     {
