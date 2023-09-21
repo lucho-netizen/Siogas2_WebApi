@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using Siogas2_webapi.Models;
 
+
 namespace Siogas2.Data.Parametrizacion
 {
     internal class GasoductoRepository : RepositoryBase, IGasoductoRepository
@@ -15,12 +16,9 @@ namespace Siogas2.Data.Parametrizacion
         {
         }
 
-        public GasoductoRepository(string connectionString) : base(null)
-        {
-            this.connectionString = connectionString;
-        }
+        
 
-        public IEnumerable<Gasoducto> TraerGasoductos(string opcion, string user_name)
+        public IEnumerable<GasoductoOptionUser> TraerGasoductos(string opcion, string user_name)
         {
             using (var connection = new SqlConnection(connectionString))
             {
@@ -32,13 +30,13 @@ namespace Siogas2.Data.Parametrizacion
                 parameters.Add("@opcion", opcion);
                 parameters.Add("@userName", user_name);
 
-                return connection.Query<Gasoducto>(storedProcedureName, parameters, commandType: CommandType.StoredProcedure);
+                return connection.Query<GasoductoOptionUser>(storedProcedureName, parameters, commandType: CommandType.StoredProcedure, transaction: Transaction);
             }
         }
     }
 
     internal interface IGasoductoRepository
     {
-        IEnumerable<Gasoducto> TraerGasoductos(string opcion, string user_name);
+        IEnumerable<GasoductoOptionUser> TraerGasoductos(string opcion, string user_name);
     }
 }
