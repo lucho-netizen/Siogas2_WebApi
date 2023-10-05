@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 
-
 namespace Siogas3.DataInterfaces
 {
     public interface IRepository<Entity, EntityKeyType>

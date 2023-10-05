@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LogicInterface\Siogas2.LogicInterfaces.csproj" />
+    <ProjectReference Include="..\Models\Siogas2.Models.csproj" />
+    <ProjectReference Include="..\Siogas2.DataInterfaces\Siogas2.DataInterfaces.csproj" />
+    <ProjectReference Include="..\Siogas2.Data\Siogas2.Data.csproj" />
+  </ItemGroup>
+
+</Project>
