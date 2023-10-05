@@ -6,10 +6,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Siogas2.Context;
+using Siogas2.LogicInterfaces.Parametrizacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
+
 
 namespace Siogas2
 {
@@ -25,6 +28,8 @@ namespace Siogas2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<IGasoductoManager, GasoductoManager>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gasoducto", Version = "v1" });    

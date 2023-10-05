@@ -1,18 +1,18 @@
-﻿using Siogas2.LogicInterfaces.Parametrizacion;
-using Siogas2.Resources;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Models;
-
+using Siogas2.LogicInterfaces.Parametrizacion;
+using Siogas2.Resources;
+using Siogas2.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Siogas2_WebApi.Controllers
+namespace Siogas3GeneralAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -168,4 +168,4 @@ namespace Siogas2_WebApi.Controllers
             }
         }
     }
- }
+}

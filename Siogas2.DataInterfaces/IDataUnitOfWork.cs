@@ -10,10 +10,12 @@ namespace Siogas2.DataInterfaces
     public interface IDataUnitOfWork : IDisposable
     {
         IGasoductoRepository GasoductoRepository { get; }
+        object AutorizacionRepository { get; }
+
         //IClienteReventaRepository ClienteReventaRepository { get; }
         //IFavoritosRepository FavoritosRepository { get; }
 
-        // interfaces del menú parametrización
+        //// interfaces del menú parametrización
         //IConfiguracionBaseRepository ConfiguracionBaseRepository { get; }
         //IMenuRepository MenuRepository { get; }
         //ITipoSociedadRepository TipoSociedadRepository { get; }

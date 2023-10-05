@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.LogicInterfaces", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.Models", "Models\Siogas2.Models.csproj", "{840B7281-418A-4FEC-A2BA-A8A8417D7465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siogas2.Resources", "Siogas3.Resource\Siogas2.Resources.csproj", "{15289239-71C1-41F8-8FE9-1FDEFB48405C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.Resources", "Siogas3.Resource\Siogas2.Resources.csproj", "{15289239-71C1-41F8-8FE9-1FDEFB48405C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siogas2.BussinesLogic", "Siogas2.BussinesLogic\Siogas2.BussinesLogic.csproj", "{30EF097F-1D6F-4BDE-85E5-F8CC549C9756}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30EF097F-1D6F-4BDE-85E5-F8CC549C9756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30EF097F-1D6F-4BDE-85E5-F8CC549C9756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30EF097F-1D6F-4BDE-85E5-F8CC549C9756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30EF097F-1D6F-4BDE-85E5-F8CC549C9756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

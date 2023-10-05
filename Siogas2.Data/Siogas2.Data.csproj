@@ -12,11 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Models\Siogas2.Models.csproj" />
+    <ProjectReference Include="..\Siogas2.DataInterfaces\Siogas2.DataInterfaces.csproj" />
     <ProjectReference Include="..\Siogas2_WebApi\Siogas2_WebApi.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>

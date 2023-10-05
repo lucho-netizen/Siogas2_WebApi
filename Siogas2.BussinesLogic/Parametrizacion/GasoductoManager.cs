@@ -2,8 +2,11 @@
 using Siogas2.DataInterfaces;
 using Models;
 using System;
+using Siogas2.LogicInterfaces;
+using Siogas2.LogicInterfaces.Parametrizacion;
+
 using System.Collections.Generic;
-//using Siogas2.LogicInterfaces.Parametrizacion;
+
 
 
 namespace Siogas2.BussinesLogic
@@ -80,8 +83,7 @@ namespace Siogas2.BussinesLogic
 
                 throw;
             }
-
-
         }
+
     }
 }
