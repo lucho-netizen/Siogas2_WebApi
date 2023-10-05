@@ -2,7 +2,7 @@
 using Siogas3.DataInterfaces;
 using System.Collections.Generic;
 
-namespace Siogas2.DataInterfaces.Parameizacion
+namespace Siogas2.DataInterfaces.Parametrizacion
 {
     public interface IGasoductoRepository : IRepository<Gasoducto, int>
     {

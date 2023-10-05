@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.Data", "Siogas2.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.DataInterfaces", "Siogas2.DataInterfaces\Siogas2.DataInterfaces.csproj", "{306B0CB6-A432-4A09-84A5-B369050A0645}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicInterface", "LogicInterface\LogicInterface.csproj", "{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.LogicInterfaces", "LogicInterface\Siogas2.LogicInterfaces.csproj", "{5FE0A8E1-73D9-4B3A-9290-C71B3787891B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siogas2.Models", "Models\Siogas2.Models.csproj", "{840B7281-418A-4FEC-A2BA-A8A8417D7465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Siogas2.Models", "Models\Siogas2.Models.csproj", "{840B7281-418A-4FEC-A2BA-A8A8417D7465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siogas2.Resources", "Siogas3.Resource\Siogas2.Resources.csproj", "{15289239-71C1-41F8-8FE9-1FDEFB48405C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{840B7281-418A-4FEC-A2BA-A8A8417D7465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15289239-71C1-41F8-8FE9-1FDEFB48405C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
