@@ -12,7 +12,7 @@ using System.Linq;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Siogas3GeneralAPI.Controllers
+namespace Siogas2_WebApi
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -58,19 +58,19 @@ namespace Siogas3GeneralAPI.Controllers
         {
             try
             {
-                this.logger.LogInformation(string.Format(MessagesLogger.LOGGER_INICIAR_SERVICIO, "Get", this.GetType().FullName));
+                this.logger.LogInformation(String.Format(MessagesLogger.LOGGER_INICIAR_SERVICIO, "Get", this.GetType().FullName));
 
                 Gasoducto gasoducto = this.gasoductoManager.Get(id);
                 List<Gasoducto> lista = new List<Gasoducto>();
                 lista.Add(gasoducto);
 
-                this.logger.LogInformation(string.Format(MessagesLogger.LOGGER_FIN_SERVICIO, "Get", this.GetType().FullName));
+                this.logger.LogInformation(String.Format(MessagesLogger.LOGGER_FIN_SERVICIO, "Get", this.GetType().FullName));
 
                 return Ok(lista);
             }
             catch (SqlException ex)
             {
-                this.logger.LogError(string.Format(MessagesLogger.LOGGER_ERROR_SERVICIO, "Get", this.GetType().FullName, ex.Message));
+                this.logger.LogError(String.Format(MessagesLogger.LOGGER_ERROR_SERVICIO, "Get", this.GetType().FullName, ex.Message));
 
                 return NotFound(new { message = ex.Message, success = false });
             }

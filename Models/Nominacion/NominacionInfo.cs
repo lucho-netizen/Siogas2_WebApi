@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Siogas2.Models.Nominacion
 {
-    [Serializable]
+    
     public class NominacionInfo
     {
         public NominacionInfo()
@@ -40,7 +40,6 @@ namespace Siogas2.Models.Nominacion
         public string? Tipo_uso { get; set; }
 
     }
-    [Serializable]
     public class Valores_proveedores
     {
         public int Nominacion_transporte_id { get; set; }
@@ -171,7 +170,7 @@ namespace Siogas2.Models.Nominacion
         public List<string>? Usuario { get; set; }
     }
 
-    [Serializable]
+    
     public class RevertireliminacionDuplicadosNominacionRequest
     {
         public RevertireliminacionDuplicadosNominacionRequest()
@@ -255,7 +254,7 @@ namespace Siogas2.Models.Nominacion
         public string? Usuario { get; set; }
         public string? Comentario { get; set; }
     }
-    [Serializable]
+    
     public class ComentarioAsignacion
     {
         public ComentarioAsignacion()
@@ -265,7 +264,7 @@ namespace Siogas2.Models.Nominacion
         public string? Comentario { get; set; }
     }
 
-    [Serializable]
+    
     public class AsignacionFuente
     {
         public AsignacionFuente()
@@ -432,7 +431,7 @@ namespace Siogas2.Models.Nominacion
         public float Valor_mbtu { get; set; }
     }
 
-    [Serializable]
+    
     public class ListadoTramosAfectadosNominacionCapacidadContratada
     {
         public ListadoTramosAfectadosNominacionCapacidadContratada()
@@ -446,7 +445,7 @@ namespace Siogas2.Models.Nominacion
         public double Cc_resta { get; set; }
     }
 
-    [Serializable]
+    
     public class ReprocesarCtaBalanceRes008
     {
         public ReprocesarCtaBalanceRes008()
@@ -484,7 +483,7 @@ namespace Siogas2.Models.Nominacion
         public string? Comentario { get; set; }
     }
 
-    [Serializable]
+    
     public class AcualizarBloqueAutorizacionGlobal
     {
         public AcualizarBloqueAutorizacionGlobal()
@@ -535,7 +534,7 @@ namespace Siogas2.Models.Nominacion
         public int ConteUo { get; set; }
     }
 
-    [Serializable]
+    
     public class DatosLlenarTablasTemporalesAutorizacion
     {
         public DatosLlenarTablasTemporalesAutorizacion()
@@ -554,6 +553,6 @@ namespace Siogas2.Models.Nominacion
         public ComentarioActualizarTemporalesAutorizacion()
         {
         }
-        string? ComentarioActualizarTablasAutorizacion { get; set; }
+        string ComentarioActualizarTablasAutorizacion { get; set; }
     }
 }

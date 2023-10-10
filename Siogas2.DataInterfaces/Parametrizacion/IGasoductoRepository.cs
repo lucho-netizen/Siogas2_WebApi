@@ -1,6 +1,7 @@
-﻿using Models;
-using Siogas3.DataInterfaces;
+﻿
+using Siogas2.DataInterfaces;
 using System.Collections.Generic;
+using Models;
 
 namespace Siogas2.DataInterfaces.Parametrizacion
 {
@@ -9,3 +10,4 @@ namespace Siogas2.DataInterfaces.Parametrizacion
         IEnumerable<GasoductoOptionUser> RetrieveByOptionUser(string opcion, string userName);
     }
 }
+

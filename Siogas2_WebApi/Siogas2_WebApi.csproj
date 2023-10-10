@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.151" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
@@ -24,7 +28,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogicInterface\Siogas2.LogicInterfaces.csproj" />
-    <ProjectReference Include="..\Siogas3.Resource\Siogas2.Resources.csproj" />
+    <ProjectReference Include="..\Models\Siogas2.Models.csproj" />
+    <ProjectReference Include="..\Siogas2.BussinesLogic\Siogas2.BussinesLogic.csproj" />
+    <ProjectReference Include="..\Siogas2.DataInterfaces\Siogas2.DataInterfaces.csproj" />
+	<ProjectReference Include="..\Siogas2.Data\Siogas2.Data.csproj" />
+	<ProjectReference Include="..\Siogas3.Resource\Siogas2.Resources.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/bamboo-spec.json" /></VisualStudio></ProjectExtensions>

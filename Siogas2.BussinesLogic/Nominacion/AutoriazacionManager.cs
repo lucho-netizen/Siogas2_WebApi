@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Siogas2.DataInterfaces;
 using Models;
-using System;
-using Siogas2.LogicInterfaces;
+using Siogas2.DataInterfaces;
 using Siogas2.LogicInterfaces.Parametrizacion;
 using Siogas2.Models;
+using System;
 using System.Collections.Generic;
 
-namespace Siogas2.BussinesLogic.Parametrizacion
+namespace Siogas2.BusinessLogic.Nominacion
 {
     public class GasoductoManager : IGasoductoManager, IDisposable
     {
@@ -22,37 +21,37 @@ namespace Siogas2.BussinesLogic.Parametrizacion
 
         public void Dispose()
         {
-            dataUnitOfWork.Dispose();
+            this.dataUnitOfWork.Dispose();
         }
 
         public Gasoducto Get(int gasoductoId)
         {
-            return dataUnitOfWork.GasoductoRepository.Retrieve(gasoductoId);
+            return this.dataUnitOfWork.GasoductoRepository.Retrieve(gasoductoId);
         }
 
         public IEnumerable<Gasoducto> GetAll()
         {
-            return dataUnitOfWork.GasoductoRepository.RetrieveAll();
+            return this.dataUnitOfWork.GasoductoRepository.RetrieveAll();
         }
 
         public IEnumerable<GasoductoOptionUser> GetByOptionUser(string opcion, string userName)
         {
-            return dataUnitOfWork.GasoductoRepository.RetrieveByOptionUser(opcion, userName);
+            return this.dataUnitOfWork.GasoductoRepository.RetrieveByOptionUser(opcion, userName);
         }
 
         public void Remove(int gasoductoId)
         {
             try
             {
-                var dato = dataUnitOfWork.GasoductoRepository.Retrieve(gasoductoId);
+                var dato = this.dataUnitOfWork.GasoductoRepository.Retrieve(gasoductoId);
 
-                dataUnitOfWork.GasoductoRepository.Delete(dato);
+                this.dataUnitOfWork.GasoductoRepository.Delete(dato);
 
-                dataUnitOfWork.Commit();
+                this.dataUnitOfWork.Commit();
             }
             catch (Exception)
             {
-                dataUnitOfWork.Dispose();
+                this.dataUnitOfWork.Dispose();
 
                 throw;
             }
@@ -66,22 +65,21 @@ namespace Siogas2.BussinesLogic.Parametrizacion
             {
                 if (datos.gasoducto_id == 0)
                 {
-                    dataUnitOfWork.GasoductoRepository.Create(datos);
+                    this.dataUnitOfWork.GasoductoRepository.Create(datos);
                 }
                 else
                 {
-                    dataUnitOfWork.GasoductoRepository.Update(datos);
+                    this.dataUnitOfWork.GasoductoRepository.Update(datos);
                 }
 
-                dataUnitOfWork.Commit();
+                this.dataUnitOfWork.Commit();
             }
             catch (Exception)
             {
-                dataUnitOfWork.Dispose();
+                this.dataUnitOfWork.Dispose();
 
                 throw;
             }
         }
-
     }
 }

@@ -1,16 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Siogas2.Data.Parametrizacion;
-//using Siogas2.Data.Cdsa;
-//using Siogas2.Data.Nominacion;
 using Siogas2.DataInterfaces;
-//using Siogas2.DataInterfaces.Cdsa;
-//using Siogas2.DataInterfaces.Nominacion;
+using Siogas2.DataInterfaces.Nominacion;
 using Siogas2.DataInterfaces.Parametrizacion;
-using Siogas3.Data.Parametrizacion;
+using Siogas2.BusinessLogic.Nominacion;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-
+using Siogas2.Data.Nominacion;
 
 namespace Siogas2.Data
 {
@@ -74,7 +71,7 @@ namespace Siogas2.Data
         //private IConfirmacionAutorizacionRepository confirmacionAutorizacionRepository;
         //private IPorcentajeNodosReguladosRepository porcentajeNodosReguladosRepository;
         //private ICuentaBalanceRepository cuentaBalanceRepository;
-        //private IProcesos008Repository procesos008Repository;
+        private IProcesos008Repository procesos008Repository;
         //private IClienteAdministradoRepository clienteAdministradoRepository;
 
         public DataUnitOfWork(IConfiguration configuration)
@@ -372,10 +369,10 @@ namespace Siogas2.Data
         //{
         //    get { return cuentaBalanceRepository ?? (cuentaBalanceRepository = new CuentaBalanceRepository(_transaction)); }
         //}
-        //public IProcesos008Repository Procesos008Repository
-        //{
-        //    get { return procesos008Repository ?? (procesos008Repository = new Procesos008Repository(_transaction)); }
-        //}
+        public IProcesos008Repository Procesos008Repository
+        {
+            get { return procesos008Repository ?? (procesos008Repository = new Procesos008Repository(_transaction)); }
+        }
 
         //public IClienteAdministradoRepository ClienteAdministradoRepository
         //{

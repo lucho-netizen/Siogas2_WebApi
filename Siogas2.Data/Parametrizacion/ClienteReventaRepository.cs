@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace Siogas3.Data.Parametrizacion
+namespace Siogas2.Data.Parametrizacion
 {
     internal class ClienteReventaRepository : RepositoryBase, IClienteReventaRepository
     {

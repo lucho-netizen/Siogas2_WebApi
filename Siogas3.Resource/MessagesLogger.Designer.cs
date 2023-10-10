@@ -45,7 +45,7 @@ namespace Siogas2.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Siogas3.Resources.MessagesLogger", typeof(MessagesLogger).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Siogas2.Resources.MessagesLogger", typeof(MessagesLogger).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

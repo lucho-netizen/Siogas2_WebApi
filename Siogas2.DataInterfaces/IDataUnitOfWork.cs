@@ -1,4 +1,5 @@
-﻿using Siogas2.DataInterfaces.Parametrizacion;
+﻿using Siogas2.DataInterfaces.Nominacion;
+using Siogas2.DataInterfaces.Parametrizacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace Siogas2.DataInterfaces
     public interface IDataUnitOfWork : IDisposable
     {
         IGasoductoRepository GasoductoRepository { get; }
-        object AutorizacionRepository { get; }
+
+
 
         //IClienteReventaRepository ClienteReventaRepository { get; }
         //IFavoritosRepository FavoritosRepository { get; }
@@ -65,7 +67,7 @@ namespace Siogas2.DataInterfaces
         //IConfirmacionAutorizacionRepository ConfirmacionAutorizacionRepository { get; }
         //IPorcentajeNodosReguladosRepository PorcentajeNodosReguladosRepository { get; }
         //ICuentaBalanceRepository CuentaBalanceRepository { get; }
-        //IProcesos008Repository Procesos008Repository { get; }
+        IProcesos008Repository Procesos008Repository { get; }
         //IClienteAdministradoRepository ClienteAdministradoRepository { get; }
 
         void Commit();
