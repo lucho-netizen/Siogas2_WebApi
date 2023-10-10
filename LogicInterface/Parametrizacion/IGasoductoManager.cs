@@ -1,16 +1,17 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Models;
 
-namespace LogicInterface.Parametrizacion
+namespace Siogas2.LogicInterfaces.Parametrizacion
 
 {
-    public class IGasoductoManager
+    public interface IGasoductoManager
     {
-    //    Gasoducto Get(int gasoductoId);
-    //    IEnumerable<Gasoducto> GetAll();
-    //    IEnumerable<GasoductoOptionUser> GetByOptionUser(string opcion, string userName);
-    //    void Remove(int gasoductoId);
-    //    void Save(Gasoducto datos);
+        Gasoducto Get(int gasoductoId);
+        IEnumerable<Gasoducto> GetAll();
+        IEnumerable<GasoductoOptionUser> GetByOptionUser(string opcion, string userName);
+        void Remove(int gasoductoId);
+        void Save(Gasoducto datos);
     }
 }

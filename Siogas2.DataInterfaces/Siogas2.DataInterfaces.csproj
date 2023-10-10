@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Siogas2_WebApi\Siogas2_WebApi.csproj" />
+    <ProjectReference Include="..\Models\Siogas2.Models.csproj" />
   </ItemGroup>
 
 </Project>

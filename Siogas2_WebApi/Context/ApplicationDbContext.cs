@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Siogas2_webapi.Models;
+using Models;
 
 namespace Siogas2.Context
 {
