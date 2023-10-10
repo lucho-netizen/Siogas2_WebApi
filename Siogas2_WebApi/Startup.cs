@@ -7,14 +7,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Siogas2.BussinesLogic.Parametrizacion;
+using Siogas2.BussinesLogic;
 using Siogas2.Data;
 using Siogas2.LogicInterfaces;
 using Siogas2.LogicInterfaces.Parametrizacion;
 using Siogas2.LogicInterfaces.Nominacion;
 using System.Text;
-
-
+using Siogas2.BusinessLogic.Nominacion;
+using Siogas2.DataInterfaces;
 
 namespace Siogas2_WebApi
 {
@@ -31,8 +31,13 @@ namespace Siogas2_WebApi
         {
             services.AddControllers();
 
-            services.AddTransient<IGasoductoManager, GasoductoManager>();
+            
+            services.AddTransient<IDataUnitOfWork, DataUnitOfWork>();
+            services.AddScoped<IGasoductoManager, GasoductoManager>();
 
+            services.AddTransient<IProcesos008Manager, Procesos008Manager>();
+
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gasoducto", Version = "v1" });    

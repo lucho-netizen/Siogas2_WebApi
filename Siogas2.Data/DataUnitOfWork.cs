@@ -379,8 +379,6 @@ namespace Siogas2.Data
         //    get { return clienteAdministradoRepository ?? (clienteAdministradoRepository = new ClienteAdministradoRepository(_transaction)); }
         //}
 
-        DataInterfaces.Parametrizacion.IGasoductoRepository IDataUnitOfWork.GasoductoRepository => throw new NotImplementedException();
-
         public void Commit()
         {
             try
